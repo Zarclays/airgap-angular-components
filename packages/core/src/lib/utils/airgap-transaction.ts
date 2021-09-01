@@ -1,4 +1,4 @@
-import { IAirGapTransaction } from '@airgap/coinlib-core'
+import { IAirGapTransaction } from '@zarclays/zgap-coinlib-core'
 import BigNumber from 'bignumber.js'
 
 import { flattened } from './array'
