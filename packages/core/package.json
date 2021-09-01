@@ -1,6 +1,6 @@
 {
   "name": "@zarclays/zgap-angular-core",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "publishConfig": {
     "access": "public"
   },
@@ -43,5 +43,6 @@
     "ngx-moment": "^5.0.0",
     "rxjs": "^6.6.7",
     "zone.js": "^0.11.4"
-  }
+  },
+  "gitHead": "095d3904fffc28db966c7e47a30c58a8fc6f22a9"
 }
