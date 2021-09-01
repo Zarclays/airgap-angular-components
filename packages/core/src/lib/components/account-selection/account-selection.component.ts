@@ -1,5 +1,5 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core'
-import { AirGapWallet } from '@airgap/coinlib-core'
+import { AirGapWallet } from '@zarclays/zgap-coinlib-core'
 @Component({
   selector: 'airgap-account-selection',
   templateUrl: './account-selection.component.html',

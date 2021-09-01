@@ -1,11 +1,11 @@
-# @airgap/angular-core
+# @zarclays/zgap-angular-core
 
-[![npm](https://img.shields.io/npm/v/@airgap/angular-core.svg?colorB=brightgreen)](https://www.npmjs.com/package/@airgap/angular-core)
-[![build](https://img.shields.io/travis/airgap-it/angular-core.svg)](https://travis-ci.org/airgap-it/angular-core/)
-[![codecov](https://img.shields.io/codecov/c/gh/airgap-it/angular-core.svg)](https://codecov.io/gh/airgap-it/angular-core/)
+[![npm](https://img.shields.io/npm/v/@airgap/angular-core.svg?colorB=brightgreen)](https://www.npmjs.com/package/@zarclays/zgap-angular-core)
+[![build](https://img.shields.io/travis/airgap-it/angular-core.svg)](https://travis-ci.org/airgap-it/zgap-angular-core/)
+[![codecov](https://img.shields.io/codecov/c/gh/airgap-it/angular-core.svg)](https://codecov.io/gh/zarclays/zgap-angular-core/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-`@airgap/angular-core` consists of numerous utility functions and types as well as Angular components and services that can be used standalone in Angular based projects or as a base for more specific implementations.
+`@zarclays/zgap-angular-core` consists of numerous utility functions and types as well as Angular components and services that can be used standalone in Angular based projects or as a base for more specific implementations.
 
 ## Requirements
 
@@ -14,7 +14,7 @@ Please check `peerDependencies` in `package.json` to see what dependencies are r
 ## Install
 
 ```
-$ npm install --save @airgap/angular-core
+$ npm install --save @zarclays/zgap-angular-core
 ```
 
 ## Development

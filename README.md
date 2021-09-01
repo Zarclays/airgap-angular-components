@@ -1,6 +1,6 @@
-# AirGap Angular Components
+# ZGap Angular Components
 
-A set of Angular libraries providing utilities, UI components and services used across various [AirGap](https://airgap.it/) projects.
+A set of Angular libraries providing utilities, UI components and services used across various [ZGap](https://zgap.it/) projects.
 
 ## Overview
 

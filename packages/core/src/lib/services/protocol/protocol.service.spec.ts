@@ -24,7 +24,7 @@ import {
   NetworkType,
   ProtocolNetwork,
   ICoinProtocol,
-} from '@airgap/coinlib-core'
+} from '@zarclays/zgap-coinlib-core'
 import { duplicatesRemoved } from '../../utils/array'
 import { getIdentifiers, getSubIdentifiers } from './utils/test'
 import { ProtocolService, ProtocolServiceConfig } from './protocol.service'

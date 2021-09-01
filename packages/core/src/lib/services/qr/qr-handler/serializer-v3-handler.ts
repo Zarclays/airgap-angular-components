@@ -1,4 +1,4 @@
-import { IACMessageDefinitionObjectV3, SerializerV3 } from '@airgap/coinlib-core'
+import { IACMessageDefinitionObjectV3, SerializerV3 } from '@zarclays/zgap-coinlib-core'
 import { UR, URDecoder, UREncoder } from '@ngraveio/bc-ur'
 import * as bs58check from 'bs58check'
 import { IACHandlerStatus, IACMessageHandler } from '../../iac/message-handler'

@@ -20,7 +20,7 @@ import {
   TezosUSD,
   SubProtocolSymbols,
   MoonriverProtocol,
-} from '@airgap/coinlib-core'
+} from '@zarclays/zgap-coinlib-core'
 import { Token } from '../../types/Token'
 import { ethTokens } from './tokens'
 

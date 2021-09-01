@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { ICoinProtocol, ProtocolNetwork, MainProtocolSymbols, getProtocolOptionsByIdentifier, isNetworkEqual } from '@airgap/coinlib-core'
+import { ICoinProtocol, ProtocolNetwork, MainProtocolSymbols, getProtocolOptionsByIdentifier, isNetworkEqual } from '@zarclays/zgap-coinlib-core'
 import { getProtocolAndNetworkIdentifier } from '../../../../utils/protocol/protocol-network-identifier'
 import { BaseProtocolStoreService, BaseProtocolStoreConfig } from '../base-protocol-store.service'
 

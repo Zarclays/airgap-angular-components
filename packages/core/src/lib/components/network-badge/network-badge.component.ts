@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core'
-import { ProtocolNetwork, NetworkType } from '@airgap/coinlib-core'
+import { ProtocolNetwork, NetworkType } from '@zarclays/zgap-coinlib-core'
 
 @Component({
   selector: 'airgap-network-badge',

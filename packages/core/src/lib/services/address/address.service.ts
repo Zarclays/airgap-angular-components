@@ -1,4 +1,4 @@
-import { ICoinProtocol, ProtocolNetwork, ProtocolSymbols } from '@airgap/coinlib-core'
+import { ICoinProtocol, ProtocolNetwork, ProtocolSymbols } from '@zarclays/zgap-coinlib-core'
 import { Injectable } from '@angular/core'
 import { ExternalAliasResolver } from '../../types/ExternalAliasResolver'
 import { getProtocolAndNetworkIdentifier } from '../../utils/protocol/protocol-network-identifier'

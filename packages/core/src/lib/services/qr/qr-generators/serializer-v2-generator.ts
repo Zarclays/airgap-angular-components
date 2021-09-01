@@ -1,4 +1,4 @@
-import { IACMessageDefinitionObject, IACMessageDefinitionObjectV3, Serializer } from '@airgap/coinlib-core'
+import { IACMessageDefinitionObject, IACMessageDefinitionObjectV3, Serializer } from '@zarclays/zgap-coinlib-core'
 import { IACQrGenerator } from '../../iac/qr-generator'
 import { convertV3ToV2 } from '../../serializer/serializer.service'
 

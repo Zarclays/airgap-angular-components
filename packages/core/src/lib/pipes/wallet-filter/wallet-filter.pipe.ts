@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core'
-import { AirGapWallet, AirGapWalletStatus } from '@airgap/coinlib-core'
+import { AirGapWallet, AirGapWalletStatus } from '@zarclays/zgap-coinlib-core'
 
 interface WalletFilterPipeArgs {
   symbol?: string

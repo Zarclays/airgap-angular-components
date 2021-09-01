@@ -1,6 +1,6 @@
 {
-  "name": "airgap-angular-components",
-  "version": "0.0.0",
+  "name": "zgap-angular-components",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "build": "lerna run build --stream",
@@ -22,8 +22,8 @@
   },
   "private": true,
   "dependencies": {
-    "@airgap/angular-core": "file:packages/core",
-    "@airgap/angular-ngrx": "file:packages/ngrx"
+    "@zarclays/zgap-angular-core": "file:packages/core",
+    "@zarclays/zgap-angular-ngrx": "file:packages/ngrx"
   },
   "devDependencies": {
     "@airgap/coinlib-core": "^0.11.10",

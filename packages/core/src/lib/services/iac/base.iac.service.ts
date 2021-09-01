@@ -1,4 +1,4 @@
-import { IACMessageDefinitionObjectV3, IACMessageType } from '@airgap/coinlib-core'
+import { IACMessageDefinitionObjectV3, IACMessageType } from '@zarclays/zgap-coinlib-core'
 import { UiEventElementsService } from '../ui-event-elements/ui-event-elements.service'
 import { ClipboardService } from '../clipboard/clipboard.service'
 import { IACMessageHandler, IACMessageTransport, IACHandlerStatus } from './message-handler'

@@ -5,7 +5,7 @@ import {
   ICoinProtocol,
   SignedTransaction,
   UnsignedTransaction
-} from '@airgap/coinlib-core'
+} from '@zarclays/zgap-coinlib-core'
 import { Injectable } from '@angular/core'
 
 import { Token } from '../../types/Token'

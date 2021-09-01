@@ -7,7 +7,7 @@ import {
   MainProtocolSymbols,
   getProtocolOptionsByIdentifier,
   isNetworkEqual
-} from '@airgap/coinlib-core'
+} from '@zarclays/zgap-coinlib-core'
 import { getMainIdentifier } from '../../../../utils/protocol/protocol-identifier'
 import { getProtocolAndNetworkIdentifier } from '../../../../utils/protocol/protocol-network-identifier'
 import { Token } from '../../../../types/Token'

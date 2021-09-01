@@ -17,7 +17,7 @@ import {
   SubProtocolSymbols,
   NetworkType,
   ProtocolNetwork
-} from '@airgap/coinlib-core'
+} from '@zarclays/zgap-coinlib-core'
 import { getSubIdentifiers } from '../../utils/test'
 import { SubProtocolStoreService, SubProtocolStoreConfig } from './sub-protocol-store.service'
 

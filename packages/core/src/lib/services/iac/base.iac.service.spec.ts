@@ -1,4 +1,4 @@
-import { IACMessageDefinitionObjectV3, IACMessageType } from '@airgap/coinlib-core'
+import { IACMessageDefinitionObjectV3, IACMessageType } from '@zarclays/zgap-coinlib-core'
 import { BaseIACService, RelayMessage } from './base.iac.service'
 import { IACHandlerStatus, IACMessageTransport } from './message-handler'
 

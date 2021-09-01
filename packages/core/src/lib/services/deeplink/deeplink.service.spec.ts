@@ -4,7 +4,7 @@ import { TestBedUtils } from '../../../../test/utils/test-bed'
 import { APP_PLUGIN } from '../../capacitor-plugins/injection-tokens'
 import { AppPluginMock } from '../../../../test/utils/plugins-mock'
 import { DeeplinkService } from './deeplink.service'
-import { IACMessageDefinitionObjectV3, MainProtocolSymbols } from '@airgap/coinlib-core'
+import { IACMessageDefinitionObjectV3, MainProtocolSymbols } from '@zarclays/zgap-coinlib-core'
 
 describe('DeeplinkService', () => {
   let service: DeeplinkService

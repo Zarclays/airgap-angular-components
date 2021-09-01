@@ -6,7 +6,7 @@ import {
   IACMessageType,
   Serializer,
   SerializerV3
-} from '@airgap/coinlib-core'
+} from '@zarclays/zgap-coinlib-core'
 import { parseIACUrl } from '../../utils/utils'
 import { defaultValues, InternalStorageKey, InternalStorageService } from '../storage/storage.service'
 import { IACMessages as IACMessagesV3 } from '@airgap/coinlib-core/serializer-v3/message' // TODO: Import from index

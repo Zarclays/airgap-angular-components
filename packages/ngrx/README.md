@@ -1,11 +1,11 @@
-# @airgap/angular-ngrx
+# @zarclays/zgap-angular-ngrx
 
-[![npm](https://img.shields.io/npm/v/@airgap/angular-ngrx.svg?colorB=brightgreen)](https://www.npmjs.com/package/@airgap/ngrx)
-[![build](https://img.shields.io/travis/airgap-it/angular-ngrx.svg)](https://travis-ci.org/airgap-it/angular-ngrx/)
-[![codecov](https://img.shields.io/codecov/c/gh/airgap-it/angular-ngrx.svg)](https://codecov.io/gh/airgap-it/angular-ngrx/)
+[![npm](https://img.shields.io/npm/v/@airgap/angular-ngrx.svg?colorB=brightgreen)](https://www.npmjs.com/package/@zarclays/zgap-angular-ngrx)
+[![build](https://img.shields.io/travis/airgap-it/angular-ngrx.svg)](https://travis-ci.org/airgap-it/zgap-angular-ngrx/)
+[![codecov](https://img.shields.io/codecov/c/gh/airgap-it/angular-ngrx.svg)](https://codecov.io/gh/zarclays/zgap-angular-ngrx/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-`@airgap/angular-ngrx` extends `@airgap/angular-core` providing [NgRx](https://ngrx.io/) support for its components.
+`@zarclays/zgap-angular-ngrx` extends `@zarclays/zgap-angular-core` providing [NgRx](https://ngrx.io/) support for its components.
 
 ## Requirements
 
@@ -14,7 +14,7 @@ Please check `peerDependencies` in `package.json` to see what dependencies are r
 ## Install
 
 ```
-$ npm install --save @airgap/angular-ngrx
+$ npm install --save @zarclays/zgap-angular-ngrx
 ```
 
 ## Development

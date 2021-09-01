@@ -7,7 +7,7 @@ import { APP_CONFIG, AppConfig } from '../../config/app-config'
 import { IACQrGenerator } from '../../services/iac/qr-generator'
 import { SerializerV3Generator } from '../../services/qr/qr-generators/serializer-v3-generator'
 import { SerializerV2Generator } from '../../services/qr/qr-generators/serializer-v2-generator'
-import { IACMessageDefinitionObjectV3 } from '@airgap/coinlib-core'
+import { IACMessageDefinitionObjectV3 } from '@zarclays/zgap-coinlib-core'
 import { defaultValues } from '../../services/storage/storage.service'
 
 export enum QRType {

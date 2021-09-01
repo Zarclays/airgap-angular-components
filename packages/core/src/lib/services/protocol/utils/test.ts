@@ -1,4 +1,4 @@
-import { ICoinSubProtocol, ICoinProtocol, ProtocolSymbols } from '@airgap/coinlib-core'
+import { ICoinSubProtocol, ICoinProtocol, ProtocolSymbols } from '@zarclays/zgap-coinlib-core'
 import { SubProtocolsMap } from '../store/sub/sub-protocol-store.service'
 
 export function getIdentifiers(protocols: ICoinProtocol[]): ProtocolSymbols[] {

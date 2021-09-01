@@ -14,7 +14,7 @@ import {
   MainProtocolSymbols,
   NetworkType,
   ProtocolNetwork
-} from '@airgap/coinlib-core'
+} from '@zarclays/zgap-coinlib-core'
 import { getIdentifiers } from '../../utils/test'
 import { MainProtocolStoreService, MainProtocolStoreConfig } from './main-protocol-store.service'
 

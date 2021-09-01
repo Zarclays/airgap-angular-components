@@ -7,7 +7,7 @@ import {
   SubProtocolSymbols,
   MainProtocolSymbols,
   getProtocolOptionsByIdentifier
-} from '@airgap/coinlib-core'
+} from '@zarclays/zgap-coinlib-core'
 import { getProtocolAndNetworkIdentifier } from '../../utils/protocol/protocol-network-identifier'
 import { ExposedPromise } from '../../utils/ExposedPromise'
 import { MainProtocolStoreConfig, MainProtocolStoreService } from './store/main/main-protocol-store.service'

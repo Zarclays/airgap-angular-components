@@ -1,4 +1,4 @@
-import { AirGapWallet, ICoinProtocol, MessageSignRequest, UnsignedTransaction } from '@airgap/coinlib-core'
+import { AirGapWallet, ICoinProtocol, MessageSignRequest, UnsignedTransaction } from '@zarclays/zgap-coinlib-core'
 import { Injectable } from '@angular/core'
 
 type Unsigned = UnsignedTransaction | MessageSignRequest

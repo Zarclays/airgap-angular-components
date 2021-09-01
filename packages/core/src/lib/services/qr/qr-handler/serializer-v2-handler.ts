@@ -1,4 +1,4 @@
-import { IACMessageDefinitionObject, IACMessageDefinitionObjectV3, Serializer } from '@airgap/coinlib-core'
+import { IACMessageDefinitionObject, IACMessageDefinitionObjectV3, Serializer } from '@zarclays/zgap-coinlib-core'
 import { IACHandlerStatus, IACMessageHandler } from '../../iac/message-handler'
 import { convertV2ToV3 } from '../../serializer/serializer.service'
 
