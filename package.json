@@ -26,7 +26,7 @@
     "@zarclays/zgap-angular-ngrx": "file:packages/ngrx"
   },
   "devDependencies": {
-    "@airgap/coinlib-core": "^0.11.10",
+    "@zarclays/zgap-coinlib-core": "^0.13.6",
     "@angular-devkit/build-angular": "~0.1102.8",
     "@angular-devkit/core": "^11.2.9",
     "@angular-eslint/eslint-plugin": "2.1.0",

@@ -15,13 +15,18 @@ import {
   EthereumProtocolNetwork,
   EthereumERC20ProtocolConfig,
   TezosUUSD,
+  RSKProtocol,
+  // RSKTestnetProtocol,
   TezosYOU,
   TezosBTC,
   TezosUSD,
   SubProtocolSymbols,
   MoonriverProtocol,
+  BSCProtocol,
+  CeloProtocol,
 } from '@zarclays/zgap-coinlib-core'
 import { Token } from '../../types/Token'
+// import { bscTokens } from './bsc-tokens'
 import { ethTokens } from './tokens'
 
 export function getDefaultPassiveProtocols(): ICoinProtocol[] {
@@ -35,6 +40,10 @@ export function getDefaultActiveProtocols(): ICoinProtocol[] {
     new EthereumProtocol(),
     new GroestlcoinProtocol(),
     new TezosProtocol(),
+    new RSKProtocol(),
+    //new RSKTestnetProtocol(),
+    new BSCProtocol(),
+    new CeloProtocol(),
     new CosmosProtocol(),
     new PolkadotProtocol(),
     new KusamaProtocol(),
@@ -49,7 +58,7 @@ export function getDefaultPassiveSubProtocols(): [ICoinProtocol, ICoinSubProtoco
 export function getDefaultActiveSubProtocols(): [ICoinProtocol, ICoinSubProtocol][] {
   const tezosProtocol = new TezosProtocol()
   const ethereumProtocol = new EthereumProtocol()
-
+  
   return [
     [tezosProtocol, new TezosUUSD()],
     [tezosProtocol, new TezosYOU()],
@@ -73,7 +82,26 @@ export function getDefaultActiveSubProtocols(): [ICoinProtocol, ICoinSubProtocol
               )
             )
           )
-        ] as [EthereumProtocol, GenericERC20]
+        ] as [EthereumProtocol, GenericERC20],
+
+        // ...bscTokens.map(
+        //   (token: Token) =>
+        //     [
+        //       ethereumProtocol,
+        //       new GenericERC20(
+        //         new EthereumERC20ProtocolOptions(
+        //           new EthereumProtocolNetwork(),
+        //           new EthereumERC20ProtocolConfig(
+        //             token.symbol,
+        //             token.name,
+        //             token.marketSymbol,
+        //             token.identifier as SubProtocolSymbols,
+        //             token.contractAddress,
+        //             token.decimals
+        //           )
+        //         )
+        //       )
+        //     ] as [EthereumProtocol, GenericERC20]
     )
   ]
 }

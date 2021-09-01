@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { MainProtocolSymbols } from '@airgap/coinlib-core'
+import { MainProtocolSymbols } from '@zarclays/zgap-coinlib-core'
 import { ProtocolService } from '../../services/protocol/protocol.service'
 import { MainProtocolStoreService } from '../../services/protocol/store/main/main-protocol-store.service'
 import { SubProtocolStoreService } from '../../services/protocol/store/sub/sub-protocol-store.service'

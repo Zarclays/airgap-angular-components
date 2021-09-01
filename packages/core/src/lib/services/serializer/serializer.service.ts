@@ -9,10 +9,10 @@ import {
 } from '@zarclays/zgap-coinlib-core'
 import { parseIACUrl } from '../../utils/utils'
 import { defaultValues, InternalStorageKey, InternalStorageService } from '../storage/storage.service'
-import { IACMessages as IACMessagesV3 } from '@airgap/coinlib-core/serializer-v3/message' // TODO: Import from index
-import { IACMessages as IACMessagesV2 } from '@airgap/coinlib-core/serializer/message' // TODO: Import from index
-import { AccountShareResponse as AccountShareResponseV3 } from '@airgap/coinlib-core/serializer-v3/schemas/definitions/account-share-response' // TODO: Import from index
-import { AccountShareResponse as AccountShareResponseV2 } from '@airgap/coinlib-core/serializer/schemas/definitions/account-share-response' // TODO: Import from index
+import { IACMessages as IACMessagesV3 } from '@zarclays/zgap-coinlib-core/serializer-v3/message' // TODO: Import from index
+import { IACMessages as IACMessagesV2 } from '@zarclays/zgap-coinlib-core/serializer/message' // TODO: Import from index
+import { AccountShareResponse as AccountShareResponseV3 } from '@zarclays/zgap-coinlib-core/serializer-v3/schemas/definitions/account-share-response' // TODO: Import from index
+import { AccountShareResponse as AccountShareResponseV2 } from '@zarclays/zgap-coinlib-core/serializer/schemas/definitions/account-share-response' // TODO: Import from index
 
 export const convertV2ToV3 = async (chunks: IACMessageDefinitionObject[]): Promise<IACMessageDefinitionObjectV3[]> => {
   return chunks.map((message: IACMessageDefinitionObject) => {

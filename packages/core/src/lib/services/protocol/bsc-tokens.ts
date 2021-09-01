@@ -1,0 +1,813 @@
+/* eslint-disable max-lines */
+import { Token } from '../../types/Token'
+
+export const bscTokens: Token[] = [
+  {
+    symbol: 'XCHF',
+    name: 'CryptoFranc',
+    marketSymbol: 'xchf',
+    identifier: 'bsc-bep20-xchf',
+    contractAddress: '0xB4272071eCAdd69d933AdcD19cA99fe80664fc08',
+    decimals: 18
+  },
+  {
+    symbol: 'USDT',
+    name: 'USD Tether (erc20)',
+    marketSymbol: 'usdt',
+    identifier: 'bsc-bep20-usdt',
+    contractAddress: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
+    decimals: 6
+  },
+  {
+    symbol: 'BNB',
+    name: 'Binance Coin',
+    marketSymbol: 'bnb',
+    identifier: 'bsc-bep20-bnb',
+    contractAddress: '0xB8c77482e45F1F44dE1745F52C74426C631bDD52',
+    decimals: 18
+  },
+  {
+    symbol: 'LINK',
+    name: 'Chainlink token',
+    marketSymbol: 'link',
+    identifier: 'bsc-bep20-link',
+    contractAddress: '0x514910771AF9Ca656af840dff83E8264EcF986CA',
+    decimals: 18
+  },
+  {
+    symbol: 'CRO',
+    name: 'Crypto.com Coin',
+    marketSymbol: 'cro',
+    identifier: 'bsc-bep20-cro',
+    contractAddress: '0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b',
+    decimals: 8
+  },
+  {
+    symbol: 'USDC',
+    name: 'USD Coin',
+    marketSymbol: 'usdc',
+    identifier: 'bsc-bep20-usdc',
+    contractAddress: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+    decimals: 6
+  },
+  {
+    symbol: 'LEO',
+    name: 'Bitfinex LEO',
+    marketSymbol: 'leo',
+    identifier: 'bsc-bep20-leo',
+    contractAddress: '0x2af5d2ad76741191d15dfe7bf6ac92d4bd912ca3',
+    decimals: 18
+  },
+  {
+    symbol: 'YFI',
+    name: 'yearn.finance',
+    marketSymbol: 'yfi',
+    identifier: 'bsc-bep20-yfi',
+    contractAddress: '0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e',
+    decimals: 18
+  },
+  {
+    symbol: 'HT',
+    name: 'HuobiToken',
+    marketSymbol: 'ht',
+    identifier: 'bsc-bep20-ht',
+    contractAddress: '0x6f259637dcd74c767781e37bc6133cd6a68aa161',
+    decimals: 18
+  },
+  {
+    symbol: 'UMA',
+    name: 'UMA Voting Token v1',
+    marketSymbol: 'uma',
+    identifier: 'bsc-bep20-uma',
+    contractAddress: '0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828',
+    decimals: 18
+  },
+  {
+    symbol: 'VEN',
+    name: 'VeChain',
+    marketSymbol: 'ven',
+    identifier: 'bsc-bep20-ven',
+    contractAddress: '0xD850942eF8811f2A866692A623011bDE52a462C1',
+    decimals: 18
+  },
+  {
+    symbol: 'LEND',
+    name: 'EthLend',
+    marketSymbol: 'lend',
+    identifier: 'bsc-bep20-lend',
+    contractAddress: '0x80fB784B7eD66730e8b1DBd9820aFD29931aab03',
+    decimals: 18
+  },
+  {
+    symbol: 'WBTC',
+    name: 'Wrapped Bitcoin',
+    marketSymbol: 'wbtc',
+    identifier: 'bsc-bep20-wbtc',
+    contractAddress: '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599',
+    decimals: 8
+  },
+  {
+    symbol: 'DAI',
+    name: 'Dai Stabletoken',
+    marketSymbol: 'dai',
+    identifier: 'bsc-bep20-dai',
+    contractAddress: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+    decimals: 18
+  },
+  {
+    symbol: 'TUSD',
+    name: 'TrueUSD',
+    marketSymbol: 'tusd',
+    identifier: 'bsc-bep20-tusd',
+    contractAddress: '0x0000000000085d4780B73119b644AE5ecd22b376',
+    decimals: 18
+  },
+  {
+    symbol: 'MKR',
+    name: 'Maker',
+    marketSymbol: 'mkr',
+    identifier: 'bsc-bep20-mkr',
+    contractAddress: '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2',
+    decimals: 18
+  },
+  // {
+  //   symbol: 'SNX',
+  //   name: 'Synthetix Network Token',
+  //   marketSymbol: 'snx',
+  //   identifier: 'bsc-bep20-snx',
+  //   contractAddress: '0xC011A72400E58ecD99Ee497CF89E3775d4bd732F',
+  //   decimals: 18
+  // },
+  {
+    symbol: 'THETA',
+    name: 'Theta Token',
+    marketSymbol: 'theta',
+    identifier: 'bsc-bep20-theta',
+    contractAddress: '0x3883f5e181fccaF8410FA61e12b59BAd963fb645',
+    decimals: 18
+  },
+  {
+    symbol: 'OMG',
+    name: 'OMG Network',
+    marketSymbol: 'omg',
+    identifier: 'bsc-bep20-omg',
+    contractAddress: '0xd26114cd6EE289AccF82350c8d8487fedB8A0C07',
+    decimals: 18
+  },
+  {
+    symbol: 'INO',
+    name: 'Ino Coin',
+    marketSymbol: 'ino',
+    identifier: 'bsc-bep20-ino',
+    contractAddress: '0xc9859fccc876e6b4b3c749c5d29ea04f48acb74f',
+    decimals: 0
+  },
+  {
+    symbol: 'COMP',
+    name: 'Compound',
+    marketSymbol: 'comp',
+    identifier: 'bsc-bep20-comp',
+    contractAddress: '0xc00e94cb662c3520282e6f5717214004a7f26888',
+    decimals: 18
+  },
+  {
+    symbol: 'OKB',
+    name: 'OKB',
+    marketSymbol: 'okb',
+    identifier: 'bsc-bep20-okb',
+    contractAddress: '0x75231f58b43240c9718dd58b4967c5114342a86c',
+    decimals: 18
+  },
+  {
+    symbol: 'BUSD',
+    name: 'Binance USD',
+    marketSymbol: 'busd',
+    identifier: 'bsc-bep20-busd',
+    contractAddress: '0x4fabb145d64652a948d72533023f6e7a623c7c53',
+    decimals: 18
+  },
+  {
+    symbol: 'BAT',
+    name: 'Basic Attention Token',
+    marketSymbol: 'bat',
+    identifier: 'bsc-bep20-bat',
+    contractAddress: '0x0D8775F648430679A709E98d2b0Cb6250d2887EF',
+    decimals: 18
+  },
+  {
+    symbol: 'HEDG',
+    name: 'HEDG Trade',
+    marketSymbol: 'hedg',
+    identifier: 'bsc-bep20-hedge',
+    contractAddress: '0xf1290473e210b2108a85237fbcd7b6eb42cc654f',
+    decimals: 18
+  },
+  {
+    symbol: 'INB',
+    name: 'Insight Chain',
+    marketSymbol: 'inb',
+    identifier: 'bsc-bep20-inb',
+    contractAddress: '0x17aa18a4b64a55abed7fa543f2ba4e91f2dce482',
+    decimals: 18
+  },
+  {
+    symbol: 'ZRX',
+    name: 'Ox',
+    marketSymbol: 'zrx',
+    identifier: 'bsc-bep20-zrx',
+    contractAddress: '0xe41d2489571d322189246dafa5ebde1f4699f498',
+    decimals: 18
+  },
+  {
+    symbol: 'LRC',
+    name: 'LoopringCoin V2',
+    marketSymbol: 'lrc',
+    identifier: 'bsc-bep20-lrc',
+    contractAddress: '0xbbbbca6a901c926f240b89eacb641d8aec7aeafd',
+    decimals: 18
+  },
+  {
+    symbol: 'NXM',
+    name: 'NXM',
+    marketSymbol: 'nxm',
+    identifier: 'bsc-bep20-nxm',
+    contractAddress: '0xd7c49cee7e9188cca6ad8ff264c1da2e69d4cf3b',
+    decimals: 18
+  },
+  {
+    symbol: 'NXM',
+    name: 'NXM',
+    marketSymbol: 'nxm',
+    identifier: 'bsc-bep20-nxm',
+    contractAddress: '0xd7c49cee7e9188cca6ad8ff264c1da2e69d4cf3b',
+    decimals: 18
+  },
+  {
+    symbol: 'PAX',
+    name: 'Paxos Standard',
+    marketSymbol: 'pax',
+    identifier: 'bsc-bep20-pax',
+    contractAddress: '0x8E870D67F660D95d5be530380D0eC0bd388289E1',
+    decimals: 18
+  },
+  {
+    symbol: 'REN',
+    name: 'Republic Token',
+    marketSymbol: 'ren',
+    identifier: 'bsc-bep20-ren',
+    contractAddress: '0x408e41876cCCDC0F92210600ef50372656052a38',
+    decimals: 18
+  },
+  {
+    symbol: 'KNC',
+    name: 'Kyber Network',
+    marketSymbol: 'knc',
+    identifier: 'bsc-bep20-knc',
+    contractAddress: '0xdd974D5C2e2928deA5F71b9825b8b646686BD200',
+    decimals: 18
+  },
+  {
+    symbol: 'cUSDC',
+    name: 'Compound USD Coin',
+    marketSymbol: 'cusdc',
+    identifier: 'bsc-bep20-cusdc',
+    contractAddress: '0x39aa39c021dfbae8fac545936693ac917d5e7563',
+    decimals: 8
+  },
+  {
+    symbol: 'REPv2',
+    name: 'Reputation',
+    marketSymbol: 'repv2',
+    identifier: 'bsc-bep20-repv2',
+    contractAddress: '0x221657776846890989a759ba2973e427dff5c9bb',
+    decimals: 18
+  },
+  {
+    symbol: 'SUSHI',
+    name: 'SushiToken',
+    marketSymbol: 'sushi',
+    identifier: 'bsc-bep20-sushi',
+    contractAddress: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
+    decimals: 18
+  },
+  {
+    symbol: 'BAND',
+    name: 'BandToken',
+    marketSymbol: 'band',
+    identifier: 'bsc-bep20-band',
+    contractAddress: '0xba11d00c5f74255f56a5e366f4f77f5a186d7f55',
+    decimals: 18
+  },
+  {
+    symbol: 'ANT',
+    name: 'Aragon',
+    marketSymbol: 'ant',
+    identifier: 'bsc-bep20-ant',
+    contractAddress: '0x960b236A07cf122663c4303350609A66A7B288C0',
+    decimals: 18
+  },
+  {
+    symbol: 'BAL',
+    name: 'Balancer',
+    marketSymbol: 'bal',
+    identifier: 'bsc-bep20-bal',
+    contractAddress: '0xba100000625a3754423978a60c9317c58a424e3d',
+    decimals: 18
+  },
+  {
+    symbol: 'HUSD',
+    name: 'HUSD',
+    marketSymbol: 'husd',
+    identifier: 'bsc-bep20-husd',
+    contractAddress: '0xdf574c24545e5ffecb9a659c229253d4111d87e1',
+    decimals: 8
+  },
+  {
+    symbol: 'CEL',
+    name: 'Celsius',
+    marketSymbol: 'cel',
+    identifier: 'bsc-bep20-cel',
+    contractAddress: '0xaaaebe6fe48e54f431b0c390cfaf0b017d09d42d',
+    decimals: 4
+  },
+  {
+    symbol: 'AMPL',
+    name: 'Ampleforth',
+    marketSymbol: 'ampl',
+    identifier: 'bsc-bep20-ampl',
+    contractAddress: '0xd46ba6d942050d489dbd938a2c909a5d5039a161',
+    decimals: 9
+  },
+  {
+    symbol: 'ENJ',
+    name: 'Enjin',
+    marketSymbol: 'enj',
+    identifier: 'bsc-bep20-enj',
+    contractAddress: '0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c',
+    decimals: 18
+  },
+  {
+    symbol: 'REV',
+    name: 'Revain',
+    marketSymbol: 'rev',
+    identifier: 'bsc-bep20-rev',
+    contractAddress: '0x2ef52Ed7De8c5ce03a4eF0efbe9B7450F2D7Edc9',
+    decimals: 6
+  },
+  {
+    symbol: 'CVT',
+    name: 'CyberVeinToken',
+    marketSymbol: 'cvt',
+    identifier: 'bsc-bep20-cvt',
+    contractAddress: '0xbe428c3867f05dea2a89fc76a102b544eac7f772',
+    decimals: 18
+  },
+  {
+    symbol: 'Bytom',
+    name: 'CyberVeinToken',
+    marketSymbol: 'btm',
+    identifier: 'bsc-bep20-btm',
+    contractAddress: '0xcb97e65f07da24d46bcdd078ebebd7c6e6e3d750',
+    decimals: 18
+  },
+  {
+    symbol: 'OCEAN',
+    name: 'Ocean Token',
+    marketSymbol: 'ocean',
+    identifier: 'bsc-bep20-ocean',
+    contractAddress: '0x7AFeBBB46fDb47ed17b22ed075Cde2447694fB9e',
+    decimals: 18
+  },
+  {
+    symbol: 'wNXM',
+    name: 'Wrapped NXM',
+    marketSymbol: 'wnxm',
+    identifier: 'bsc-bep20-wnxm',
+    contractAddress: '0x0d438f3b5175bebc262bf23753c1e53d03432bde',
+    decimals: 18
+  },
+  {
+    symbol: 'MANA',
+    name: 'Decentraland',
+    marketSymbol: 'mana',
+    identifier: 'bsc-bep20-mana',
+    contractAddress: '0x0f5d2fb29fb7d3cfee444a200298f468908cc942',
+    decimals: 18
+  },
+  {
+    symbol: 'SXP',
+    name: 'Swipe',
+    marketSymbol: 'sxp',
+    identifier: 'bsc-bep20-sxp',
+    contractAddress: '0x8ce9137d39326ad0cd6491fb5cc0cba0e089b6a9',
+    decimals: 18
+  },
+  {
+    symbol: 'LPT',
+    name: 'Livepeer Token',
+    marketSymbol: 'lpt',
+    identifier: 'bsc-bep20-lpt',
+    contractAddress: '0x58b6a8a3302369daec383334672404ee733ab239',
+    decimals: 18
+  },
+  {
+    symbol: 'GNT',
+    name: 'Golem',
+    marketSymbol: 'gnt',
+    identifier: 'bsc-bep20-gnt',
+    contractAddress: '0xa74476443119A942dE498590Fe1f2454d7D4aC0d',
+    decimals: 18
+  },
+  {
+    symbol: 'QNT',
+    name: 'Quant',
+    marketSymbol: 'qnt',
+    identifier: 'bsc-bep20-qnt',
+    contractAddress: '0x4a220e6096b25eadb88358cb44068a3248254675',
+    decimals: 18
+  },
+  {
+    symbol: 'SAI',
+    name: 'Sai Stablecoin v1.0',
+    marketSymbol: 'sai',
+    identifier: 'bsc-bep20-sai',
+    contractAddress: '0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359',
+    decimals: 18
+  },
+  {
+    symbol: 'NMR',
+    name: 'Numeraire',
+    marketSymbol: 'nmr',
+    identifier: 'bsc-bep20-nmr',
+    contractAddress: '0x1776e1f26f98b1a5df9cd347953a26dd3cb46671',
+    decimals: 18
+  },
+  {
+    symbol: 'DX',
+    name: 'DxChain Token',
+    marketSymbol: 'dx',
+    identifier: 'bsc-bep20-dx',
+    contractAddress: '0x973e52691176d36453868d9d86572788d27041a9',
+    decimals: 18
+  },
+  {
+    symbol: 'IOST',
+    name: 'IOSToken',
+    marketSymbol: 'iost',
+    identifier: 'bsc-bep20-iost',
+    contractAddress: '0xfa1a856cfa3409cfa145fa4e20eb270df3eb21ab',
+    decimals: 18
+  },
+  {
+    symbol: 'KCS',
+    name: 'Kucoin Shares',
+    marketSymbol: 'kcs',
+    identifier: 'bsc-bep20-kcs',
+    contractAddress: '0x039b5649a59967e3e936d7471f9c3700100ee1ab',
+    decimals: 6
+  },
+  {
+    symbol: 'RSR',
+    name: 'Reserve Rights',
+    marketSymbol: 'rsr',
+    identifier: 'bsc-bep20-rsr',
+    contractAddress: '0x8762db106b2c2a0bccb3a80d1ed41273552616e8',
+    decimals: 18
+  },
+  {
+    symbol: 'SRM',
+    name: 'Serum',
+    marketSymbol: 'srm',
+    identifier: 'bsc-bep20-srm',
+    contractAddress: '0x476c5E26a75bd202a9683ffD34359C0CC15be0fF',
+    decimals: 6
+  },
+  {
+    symbol: 'HOT',
+    name: 'HoloToken',
+    marketSymbol: 'hot',
+    identifier: 'bsc-bep20-hot',
+    contractAddress: '0x6c6ee5e31d828de241282b9606c8e98ea48526e2',
+    decimals: 18
+  },
+  {
+    symbol: 'DIVX',
+    name: 'DIVX',
+    marketSymbol: 'divx',
+    identifier: 'bsc-bep20-divx',
+    contractAddress: '0x13f11C9905A08ca76e3e853bE63D4f0944326C72',
+    decimals: 18
+  },
+  {
+    symbol: 'SNT',
+    name: 'Status Network',
+    marketSymbol: 'snt',
+    identifier: 'bsc-bep20-snt',
+    contractAddress: '0x744d70FDBE2Ba4CF95131626614a1763DF805B9E',
+    decimals: 18
+  },
+  {
+    symbol: 'ZB',
+    name: 'ZBToken',
+    marketSymbol: 'zb',
+    identifier: 'bsc-bep20-zb',
+    contractAddress: '0xbd0793332e9fb844a52a205a233ef27a5b34b927',
+    decimals: 18
+  },
+  {
+    symbol: 'RLC',
+    name: 'RLC',
+    marketSymbol: 'rlc',
+    identifier: 'bsc-bep20-rlc',
+    contractAddress: '0x607F4C5BB672230e8672085532f7e901544a7375',
+    decimals: 9
+  },
+  {
+    symbol: 'BRC',
+    name: 'Baer Chain',
+    marketSymbol: 'brc',
+    identifier: 'bsc-bep20-brc',
+    contractAddress: '0x21ab6c9fac80c59d401b37cb43f81ea9dde7fe34',
+    decimals: 9
+  },
+  {
+    symbol: 'STORJ',
+    name: 'STORJ',
+    marketSymbol: 'storj',
+    identifier: 'bsc-bep20-storj',
+    contractAddress: '0xB64ef51C888972c908CFacf59B47C1AfBC0Ab8aC',
+    decimals: 8
+  },
+  {
+    symbol: 'MATIC',
+    name: 'Matic Token',
+    marketSymbol: 'matic',
+    identifier: 'bsc-bep20-matic',
+    contractAddress: '0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0',
+    decimals: 18
+  },
+  {
+    symbol: 'UTK',
+    name: 'UTRUST',
+    marketSymbol: 'utk',
+    identifier: 'bsc-bep20-utk',
+    contractAddress: '0x70a72833d6bf7f508c8224ce59ea1ef3d0ea3a38',
+    decimals: 18
+  },
+  {
+    symbol: 'TRAC',
+    name: 'Trace',
+    marketSymbol: 'trac',
+    identifier: 'bsc-bep20-trac',
+    contractAddress: '0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f',
+    decimals: 18
+  },
+  {
+    symbol: 'MCO',
+    name: 'MCO',
+    marketSymbol: 'mco',
+    identifier: 'bsc-bep20-mco',
+    contractAddress: '0xb63b606ac810a52cca15e44bb630fd42d8d1d83d',
+    decimals: 8
+  },
+  {
+    symbol: 'CRV',
+    name: 'Curve DAO Token',
+    marketSymbol: 'crv',
+    identifier: 'bsc-bep20-crv',
+    contractAddress: '0xD533a949740bb3306d119CC777fa900bA034cd52',
+    decimals: 18
+  },
+  {
+    symbol: 'MXC',
+    name: 'MXCToken',
+    marketSymbol: 'mxc',
+    identifier: 'bsc-bep20-mxc',
+    contractAddress: '0x5ca381bbfb58f0092df149bd3d243b08b9a8386e',
+    decimals: 18
+  },
+  {
+    symbol: 'BNT',
+    name: 'Bancor',
+    marketSymbol: 'bnt',
+    identifier: 'bsc-bep20-bnt',
+    contractAddress: '0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C',
+    decimals: 18
+  },
+  {
+    symbol: 'XIN',
+    name: 'Mixin',
+    marketSymbol: 'xin',
+    identifier: 'bsc-bep20-xin',
+    contractAddress: '0xa974c709cfb4566686553a20790685a47aceaa33',
+    decimals: 18
+  },
+  {
+    symbol: 'XDCE',
+    name: 'XinFin XDCE',
+    marketSymbol: 'xdce',
+    identifier: 'bsc-bep20-xdce',
+    contractAddress: '0x41ab1b6fcbb2fa9dced81acbdec13ea6315f2bf2',
+    decimals: 18
+  },
+  {
+    symbol: 'NEXO',
+    name: 'Nexo',
+    marketSymbol: 'nexo',
+    identifier: 'bsc-bep20-nexo',
+    contractAddress: '0xb62132e35a6c13ee1ee0f84dc5d40bad8d815206',
+    decimals: 18
+  },
+  {
+    symbol: 'CENNZ',
+    name: 'Centrality',
+    marketSymbol: 'cennz',
+    identifier: 'bsc-bep20-cennz',
+    contractAddress: '0x1122B6a0E00DCe0563082b6e2953f3A943855c1F',
+    decimals: 18
+  },
+  {
+    symbol: 'PAXG',
+    name: 'Paxos Gold',
+    marketSymbol: 'paxg',
+    identifier: 'bsc-bep20-paxg',
+    contractAddress: '0x45804880De22913dAFE09f4980848ECE6EcbAf78',
+    decimals: 18
+  },
+  {
+    symbol: 'CHZ',
+    name: 'chiliZ',
+    marketSymbol: 'chz',
+    identifier: 'bsc-bep20-chz',
+    contractAddress: '0x3506424f91fd33084466f402d5d97f05f8e3b4af',
+    decimals: 18
+  },
+  {
+    symbol: 'GNO',
+    name: 'Gnosis',
+    marketSymbol: 'gno',
+    identifier: 'bsc-bep20-gno',
+    contractAddress: '0x6810e776880C02933D47DB1b9fc05908e5386b96',
+    decimals: 18
+  },
+  {
+    symbol: 'CHSB',
+    name: 'SwissBorg',
+    marketSymbol: 'chsb',
+    identifier: 'bsc-bep20-chsb',
+    contractAddress: '0xba9d4199fab4f26efe3551d490e3821486f135ba',
+    decimals: 8
+  },
+  {
+    symbol: 'ELF',
+    name: 'ELF',
+    marketSymbol: 'elf',
+    identifier: 'bsc-bep20-elf',
+    contractAddress: '0xbf2179859fc6d5bee9bf9158632dc51678a4100e',
+    decimals: 18
+  },
+  {
+    symbol: 'DIA',
+    name: 'DIAToken',
+    marketSymbol: 'dia',
+    identifier: 'bsc-bep20-dia',
+    contractAddress: '0x84cA8bc7997272c7CfB4D0Cd3D55cd942B3c9419',
+    decimals: 18
+  },
+  {
+    symbol: 'STAKE',
+    name: 'STAKE',
+    marketSymbol: 'stake',
+    identifier: 'bsc-bep20-stake',
+    contractAddress: '0x0Ae055097C6d159879521C384F1D2123D1f195e6',
+    decimals: 18
+  },
+  {
+    symbol: 'cZRX',
+    name: 'Compound 0x',
+    marketSymbol: 'czrx',
+    identifier: 'bsc-bep20-czrx',
+    contractAddress: '0xb3319f5d18bc0d84dd1b4825dcde5d5f7266d407',
+    decimals: 8
+  },
+  {
+    symbol: 'FTM',
+    name: 'Fantom Token',
+    marketSymbol: 'ftm',
+    identifier: 'bsc-bep20-ftm',
+    contractAddress: '0x4e15361fd6b4bb609fa63c81a2be19d873717870',
+    decimals: 18
+  },
+  {
+    symbol: 'AGI',
+    name: 'SingularityNET',
+    marketSymbol: 'agi',
+    identifier: 'bsc-bep20-agi',
+    contractAddress: '0x8eb24319393716668d768dcec29356ae9cffe285',
+    decimals: 8
+  },
+  {
+    symbol: 'MLN',
+    name: 'Melonport',
+    marketSymbol: 'mln',
+    identifier: 'bsc-bep20-mln',
+    contractAddress: '0xec67005c4E498Ec7f55E092bd1d35cbC47C91892',
+    decimals: 18
+  },
+  {
+    symbol: 'FET',
+    name: 'Fetch',
+    marketSymbol: 'fet',
+    identifier: 'bsc-bep20-fet',
+    contractAddress: '0x1d287cc25dad7ccaf76a26bc660c5f7c8e2a05bd',
+    decimals: 18
+  },
+  {
+    symbol: 'PNK',
+    name: 'Pinakion',
+    marketSymbol: 'pnk',
+    identifier: 'bsc-bep20-pnk',
+    contractAddress: '0x93ed3fbe21207ec2e8f2d3c3de6e058cb73bc04d',
+    decimals: 18
+  },
+  {
+    symbol: 'WIC',
+    name: 'WaykiCoin',
+    marketSymbol: 'wic',
+    identifier: 'bsc-bep20-wic',
+    contractAddress: '0x93ed3fbe21207ec2e8f2d3c3de6e058cb73bc04d',
+    decimals: 18
+  },
+  {
+    symbol: 'ENG',
+    name: 'Enigma',
+    marketSymbol: 'eng',
+    identifier: 'bsc-bep20-eng',
+    contractAddress: '0xf0ee6b27b759c9893ce4f094b49ad28fd15a23e4',
+    decimals: 8
+  },
+  {
+    symbol: 'WAX',
+    name: 'WAX Token',
+    marketSymbol: 'wax',
+    identifier: 'bsc-bep20-wax',
+    contractAddress: '0x39bb259f66e1c59d5abef88375979b4d20d98022',
+    decimals: 8
+  },
+  {
+    symbol: 'UBT',
+    name: 'UniBright',
+    marketSymbol: 'ubt',
+    identifier: 'bsc-bep20-ubt',
+    contractAddress: '0x8400d94a5cb0fa0d041a3788e395285d61c9ee5e',
+    decimals: 8
+  },
+  {
+    symbol: 'TRB',
+    name: 'Tellor Tributes',
+    marketSymbol: 'trb',
+    identifier: 'bsc-bep20-trb',
+    contractAddress: '0x0ba45a8b5d5575935b8158a88c631e9f9c95a2e5',
+    decimals: 18
+  },
+  {
+    symbol: 'IOTX',
+    name: 'IoTeX Network',
+    marketSymbol: 'iotx',
+    identifier: 'bsc-bep20-iotx',
+    contractAddress: '0x6fb3e0a217407efff7ca062d46c26e5d60a14d69',
+    decimals: 18
+  },
+  {
+    symbol: 'AION',
+    name: 'AION',
+    marketSymbol: 'aion',
+    identifier: 'bsc-bep20-aion',
+    contractAddress: '0x4CEdA7906a5Ed2179785Cd3A40A69ee8bc99C466',
+    decimals: 8
+  },
+  {
+    symbol: 'NOAH',
+    name: 'NOAHCOIN',
+    marketSymbol: 'noah',
+    identifier: 'bsc-bep20-noah',
+    contractAddress: '0x58a4884182d9e835597f405e5f258290e46ae7c2',
+    decimals: 18
+  },
+  {
+    symbol: 'VEST',
+    name: 'Vestchain',
+    marketSymbol: 'vest',
+    identifier: 'bsc-bep20-vest',
+    contractAddress: '0x37f04d2c3ae075fad5483bb918491f656b12bdb6',
+    decimals: 8
+  },
+  {
+    symbol: 'AOA',
+    name: 'Aurora',
+    marketSymbol: 'aoa',
+    identifier: 'bsc-bep20-aoa',
+    contractAddress: '0x9ab165D795019b6d8B3e971DdA91071421305e5a',
+    decimals: 18
+  }
+]

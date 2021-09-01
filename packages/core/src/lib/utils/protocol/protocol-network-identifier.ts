@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/unified-signatures */
-import { ICoinProtocol, ProtocolNetwork, ProtocolSymbols } from '@airgap/coinlib-core'
+import { ICoinProtocol, ProtocolNetwork, ProtocolSymbols } from '@zarclays/zgap-coinlib-core'
 
 export function getProtocolAndNetworkIdentifier(protocol: ICoinProtocol): string
 export function getProtocolAndNetworkIdentifier(protocolIdentifier: ProtocolSymbols, network: ProtocolNetwork | string): string

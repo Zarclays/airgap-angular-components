@@ -72,3 +72,7 @@ $ npm run bump:beta
 ### Other
 
 The project uses [lerna](https://lerna.js.org/) for package management. Check out [the list of available commands](https://lerna.js.org/#commands) to perform more advanced actions.
+
+
+### Fix for npm 503 - already published
+lerna exec -- "npm publish --contents dist || exit 0"
