@@ -17,6 +17,7 @@
     "e2e": "ng e2e core"
   },
   "dependencies": {
+    
     "tslib": "^2.2.0"
   },
   "peerDependencies": {
@@ -35,7 +36,7 @@
     "@ionic/core": "^5.6.4",
     "@ionic/storage": "2.2.0",
     "@ngx-translate/core": "^13.0.0",
-    "@zarclays/zgap-coinlib-core": "^0.11.10",
+    "@zarclays/zgap-coinlib-core": "^0.11.11",
     "angularx-qrcode": "^11.0.0",
     "bignumber.js": "^9.0.1",
     "moment": "^2.29.1",
