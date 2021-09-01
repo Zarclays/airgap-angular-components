@@ -11,7 +11,7 @@
 
 Please check `peerDependencies` in `package.json` to see what dependencies are required for this library.
 
-## Install
+## Install 
 
 ```
 $ npm install --save @zarclays/zgap-angular-ngrx
