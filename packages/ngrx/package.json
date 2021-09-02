@@ -1,6 +1,6 @@
 {
   "name": "@zarclays/zgap-angular-ngrx",
-  "version": "0.0.24",
+  "version": "0.1.0",
   "publishConfig": {
     "access": "public"
   },
@@ -28,5 +28,5 @@
     "rxjs": "^6.6.7",
     "zone.js": "^0.11.4"
   },
-  "gitHead": "f499078501d7258c6f00462763a1ad416d081881"
+  "gitHead": "30d7ea391e2668e7c284468fcee08583f952eef0"
 }
