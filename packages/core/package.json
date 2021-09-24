@@ -1,6 +1,6 @@
 {
   "name": "@zarclays/zgap-angular-core",
-  "version": "0.2.4",
+  "version": "0.2.7",
   "publishConfig": {
     "access": "public"
   },
@@ -35,7 +35,7 @@
     "@ionic/core": "^5.6.4",
     "@ionic/storage": "2.2.0",
     "@ngx-translate/core": "^13.0.0",
-    "@zarclays/zgap-coinlib-core": "^0.13.6",
+    "@zarclays/zgap-coinlib-core": "^0.13.7",
     "angularx-qrcode": "^11.0.0",
     "bignumber.js": "^9.0.1",
     "moment": "^2.29.1",
@@ -44,5 +44,5 @@
     "rxjs": "^6.6.7",
     "zone.js": "^0.11.4"
   },
-  "gitHead": "14b49e734279d40ec398a1e4c7a3d63d2e318eff"
+  "gitHead": "1fad4052dd5caf4839133206f2b2b9099f96cdcb"
 }
