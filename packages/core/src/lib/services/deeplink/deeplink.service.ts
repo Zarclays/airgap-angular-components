@@ -1,8 +1,8 @@
 import { Injectable, Inject } from '@angular/core'
-import { AppPlugin } from '@capacitor/core'
+import { AppLauncherPlugin } from '@capacitor/app-launcher'
 
 import { AppConfig, APP_CONFIG } from '../../config/app-config'
-import { APP_PLUGIN } from '../../capacitor-plugins/injection-tokens'
+import { APP_LAUNCHER_PLUGIN } from '../../capacitor-plugins/injection-tokens'
 import { UiEventElementsService } from '../ui-event-elements/ui-event-elements.service'
 import { IACMessageDefinitionObjectV3 } from '@zarclays/zgap-coinlib-core'
 import { IACQrGenerator } from '../iac/qr-generator'
@@ -17,33 +17,14 @@ export class DeeplinkService {
   constructor(
     private readonly uiEventElementsService: UiEventElementsService,
     private readonly serializerService: SerializerService,
-    @Inject(APP_PLUGIN) private readonly app: AppPlugin,
+    @Inject(APP_LAUNCHER_PLUGIN) private readonly appLauncher: AppLauncherPlugin,
     @Inject(APP_CONFIG) private readonly appConfig: AppConfig
   ) {}
 
   public async sameDeviceDeeplink(data: string | IACMessageDefinitionObjectV3[]): Promise<void> {
-    let deeplinkUrl = ''
-    let generator: IACQrGenerator
-    if (data && typeof data !== 'string') {
-      try {
-        generator = this.serializerService.useV3 ? new SerializerV3Generator() : new SerializerV2Generator()
-        await generator.create(data, Number.MAX_SAFE_INTEGER)
-      } catch (error) {
-        try {
-          generator = this.serializerService.useV3 ? new SerializerV2Generator() : new SerializerV3Generator()
-          await generator.create(data, Number.MAX_SAFE_INTEGER)
-        } catch (error) {
-          this.uiEventElementsService.invalidDeeplinkAlert().catch(console.error)
-        }
-      }
-
-      deeplinkUrl = await generator!.getSingle(this.appConfig.otherApp.urlScheme)
-    } else if (typeof data === 'string') {
-      deeplinkUrl = data
-    }
-
+    const deeplinkUrl = await this.generateDeepLinkUrl(data)
     return new Promise((resolve, reject) => {
-      this.app
+      this.appLauncher
         .openUrl({ url: deeplinkUrl })
         .then(() => {
           // eslint-disable-next-line no-console
@@ -59,5 +40,26 @@ export class DeeplinkService {
           reject()
         })
     })
+  }
+
+  public async generateDeepLinkUrl(data: string | IACMessageDefinitionObjectV3[]): Promise<string> {
+    let generator: IACQrGenerator
+    if (data && typeof data !== 'string') {
+      try {
+        generator = this.serializerService.useV3 ? new SerializerV3Generator() : new SerializerV2Generator()
+        await generator.create(data, Number.MAX_SAFE_INTEGER)
+      } catch (error) {
+        try {
+          generator = this.serializerService.useV3 ? new SerializerV2Generator() : new SerializerV3Generator()
+          await generator.create(data, Number.MAX_SAFE_INTEGER)
+        } catch (error) {
+          this.uiEventElementsService.invalidDeeplinkAlert().catch(console.error)
+        }
+      }
+      return await generator!.getSingle(this.appConfig.otherApp.urlScheme)
+    } else if (typeof data === 'string') {
+      return data
+    }
+    return ''
   }
 }

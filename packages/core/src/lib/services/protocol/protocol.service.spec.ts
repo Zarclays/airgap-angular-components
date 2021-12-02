@@ -35,11 +35,11 @@ import {
   getDefaultPassiveSubProtocols
 } from './defaults'
 
-fdescribe('ProtocolService', () => {
+describe('ProtocolService', () => {
   let service: ProtocolService
 
-  let tezosTestnet: TezosProtocolNetwork
   let tezosMainnet: TezosProtocolNetwork
+  let tezosTestnet: TezosProtocolNetwork
 
   let defaultActiveIdentifiers: MainProtocolSymbols[]
   let defaultPassiveIdentifiers: MainProtocolSymbols[]
@@ -57,16 +57,16 @@ fdescribe('ProtocolService', () => {
     TestBed.configureTestingModule({})
     service = TestBed.inject(ProtocolService)
 
-    tezosTestnet = new TezosProtocolNetwork(
-      'Testnet',
-      NetworkType.TESTNET,
+    tezosMainnet = new TezosProtocolNetwork(
+      'Mainnet',
+      NetworkType.MAINNET,
       undefined,
       new TezblockBlockExplorer(),
       new TezosProtocolNetworkExtras()
     )
-    tezosMainnet = new TezosProtocolNetwork(
-      'Mainnet',
-      NetworkType.MAINNET,
+    tezosTestnet = new TezosProtocolNetwork(
+      'Testnet',
+      NetworkType.TESTNET,
       undefined,
       new TezblockBlockExplorer(),
       new TezosProtocolNetworkExtras()
@@ -555,6 +555,28 @@ fdescribe('ProtocolService', () => {
       expect(foundSubProtocol?.options.network).toEqual(tezosMainnet)
     })
 
+    it('should find a sub protocol by an identifier or fall back to its main protocol', async () => {
+      const tezosTestnetProtocol = new TezosProtocol(new TezosProtocolOptions(tezosTestnet))
+
+      service.init({
+        activeProtocols: [new TezosProtocol(), tezosTestnetProtocol],
+        activeSubProtocols: [[tezosTestnetProtocol, new TezosBTC(new TezosFAProtocolOptions(tezosTestnet, new TezosBTCProtocolConfig()))]]
+      })
+
+      const foundSubProtocol = await service.getProtocol(SubProtocolSymbols.XTZ_BTC, tezosTestnet)
+      const foundFallbackMainnetProtocol = await service.getProtocol(SubProtocolSymbols.XTZ_STKR)
+      const foundFallbackTestnetProtocol = await service.getProtocol(SubProtocolSymbols.XTZ_USD, tezosTestnet)
+
+      expect(foundSubProtocol?.identifier).toBe(SubProtocolSymbols.XTZ_BTC)
+      expect(foundSubProtocol?.options.network).toEqual(tezosTestnet)
+
+      expect(foundFallbackMainnetProtocol?.identifier).toBe(MainProtocolSymbols.XTZ)
+      expect(foundFallbackMainnetProtocol?.options.network).toEqual(tezosMainnet)
+
+      expect(foundFallbackTestnetProtocol?.identifier).toBe(MainProtocolSymbols.XTZ)
+      expect(foundFallbackTestnetProtocol?.options.network).toEqual(tezosTestnet)
+    })
+
     it('should find sub protocols by a main protocol identifier', async () => {
       service.init({
         activeSubProtocols: [
@@ -747,7 +769,6 @@ fdescribe('ProtocolService', () => {
       { protocol: MainProtocolSymbols.AE, address: 'ak_2AAv366zYCwPidLKUwbtGfzPCeT956ncSXdFU36imYRf98G35523fsdte' },
       { protocol: MainProtocolSymbols.BTC, address: '' },
       { protocol: MainProtocolSymbols.BTC, address: 'JQkRgFPe52LpC9RvakKtxgwpBumeUWj4mJQkRgF' },
-      { protocol: MainProtocolSymbols.BTC, address: '1HJSw16RjLRP8uQFLGkZrSossWLNqEeUJKJ51aS' },
       { protocol: MainProtocolSymbols.BTC, address: '1Wq2bExhV6JECE5Ad' },
       { protocol: MainProtocolSymbols.BTC, address: '1IWq2bExhV6JECE5AdXH1SYtqP7LPMeCaM' },
       { protocol: MainProtocolSymbols.COSMOS, address: '' },
@@ -786,8 +807,8 @@ fdescribe('ProtocolService', () => {
         await Promise.all(invalidAddresses.map((entry) => service.isAddressOfProtocol(entry.protocol, entry.address)))
       ).reduce((all, next) => all && !next, true)
 
-      expect(allValid).toBeTrue()
-      expect(allInvalid).toBeTrue()
+      expect(allValid).toBe(true, 'allValid')
+      expect(allInvalid).toBe(true, 'allInvalid')
     })
 
     it('should return an array of protocols for which the address is valid', async () => {

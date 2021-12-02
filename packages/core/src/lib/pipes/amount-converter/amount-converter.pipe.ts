@@ -8,6 +8,7 @@ type AmountConverterValue = BigNumber | string | number | null | undefined
 interface AmountConverterArgs {
   protocol: ICoinProtocol | ProtocolSymbols | undefined | null
   maxDigits?: number
+  network?: ProtocolNetwork | string
 }
 
 interface AmountConverterNumberFormat {
@@ -48,7 +49,7 @@ export class AmountConverterPipe implements PipeTransform {
       throw new Error('Invalid maxDigits')
     }
 
-    const protocol: ICoinProtocol = await this.protocolsService.getProtocol(args.protocol)
+    const protocol: ICoinProtocol = await this.protocolsService.getProtocol(args.protocol, args.network)
     const amount = this.transformValueOnly(value, protocol, args.maxDigits)
 
     return `${amount} ${protocol.symbol}`

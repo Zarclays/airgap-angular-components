@@ -1,6 +1,13 @@
 {
   "name": "@zarclays/zgap-angular-core",
   "version": "0.2.7",
+  "main": "dist/bundles/zarclays-zgap-angular-core.umd.js",
+  "module": "dist/fesm2015/zarclays-zgap-angular-core.js",
+  "es2015": "dist/fesm2015/zarclays-zgap-angular-core.js",
+  "esm2015": "dist/esm2015/zarclays-zgap-angular-core.js",
+  "fesm2015": "dist/fesm2015/zarclays-zgap-angular-core.js",
+  "typings": "dist/zarclays-zgap-angular-core.d.ts",
+  "metadata": "dist/zarclays-zgap-angular-core.metadata.json",
   "publishConfig": {
     "access": "public"
   },
@@ -27,13 +34,20 @@
     "@angular/platform-browser": "^11.2.9",
     "@angular/platform-browser-dynamic": "^11.2.9",
     "@angular/router": "^11.2.9",
-    "@capacitor/core": "^2.4.7",
+    "@capacitor/app": "^1.0.5",
+    "@capacitor/app-launcher": "^1.0.6",
+    "@capacitor/clipboard": "^1.0.5",
+    "@capacitor/core": "^3.2.5",
+    "@capacitor/filesystem": "^1.0.6",
+    "@capacitor/splash-screen": "^1.1.5",
+    "@capacitor/status-bar": "^1.0.5",
     "@download/blockies": "^1.0.3",
     "@ionic-native/core": "^5.32.0",
     "@ionic-native/diagnostic": "^5.32.0",
     "@ionic/angular": "^5.6.4",
     "@ionic/core": "^5.6.4",
     "@ionic/storage": "2.2.0",
+    "@keystonehq/bc-ur-registry": "0.4.4",
     "@ngx-translate/core": "^13.0.0",
     "@zarclays/zgap-coinlib-core": "^0.13.7",
     "angularx-qrcode": "^11.0.0",
@@ -43,6 +57,5 @@
     "ngx-moment": "^5.0.0",
     "rxjs": "^6.6.7",
     "zone.js": "^0.11.4"
-  },
-  "gitHead": "1fad4052dd5caf4839133206f2b2b9099f96cdcb"
+  }
 }

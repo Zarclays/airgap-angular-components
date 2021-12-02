@@ -1,6 +1,7 @@
 import {
   ICoinProtocol,
   AeternityProtocol,
+  BitcoinSegwitProtocol,
   BitcoinProtocol,
   EthereumProtocol,
   GroestlcoinProtocol,
@@ -23,7 +24,7 @@ import {
   SubProtocolSymbols,
   MoonriverProtocol,
   BSCProtocol,
-  CeloProtocol,
+  CeloProtocol
 } from '@zarclays/zgap-coinlib-core'
 import { Token } from '../../types/Token'
 // import { bscTokens } from './bsc-tokens'
@@ -35,10 +36,8 @@ export function getDefaultPassiveProtocols(): ICoinProtocol[] {
 
 export function getDefaultActiveProtocols(): ICoinProtocol[] {
   return [
-    new AeternityProtocol(),
-    new BitcoinProtocol(),
+    new BitcoinSegwitProtocol(),
     new EthereumProtocol(),
-    new GroestlcoinProtocol(),
     new TezosProtocol(),
     new RSKProtocol(),
     //new RSKTestnetProtocol(),
@@ -47,7 +46,20 @@ export function getDefaultActiveProtocols(): ICoinProtocol[] {
     new CosmosProtocol(),
     new PolkadotProtocol(),
     new KusamaProtocol(),
-    new MoonriverProtocol()
+    new CosmosProtocol(),
+    new AeternityProtocol(),
+    new GroestlcoinProtocol(),
+    new MoonriverProtocol(
+      new MoonriverProtocolOptions(
+        new MoonriverProtocolNetwork(
+          undefined,
+          undefined,
+          undefined,
+          new MoonriverSubscanBlockExplorer('https://moonriver.subscan.io')
+        )
+      )
+    ),
+    new BitcoinProtocol()
   ]
 }
 
@@ -64,6 +76,11 @@ export function getDefaultActiveSubProtocols(): [ICoinProtocol, ICoinSubProtocol
     [tezosProtocol, new TezosYOU()],
     [tezosProtocol, new TezosBTC()],
     [tezosProtocol, new TezosUSD()],
+    [tezosProtocol, new TezosUDEFI()],
+    [tezosProtocol, new TezosCTez()],
+    [tezosProtocol, new TezosPlenty()],
+    [tezosProtocol, new TezosWRAP()],
+    [tezosProtocol, new TezosQUIPU()],
     [tezosProtocol, new TezosKtProtocol()],
     ...ethTokens.map(
       (token: Token) =>

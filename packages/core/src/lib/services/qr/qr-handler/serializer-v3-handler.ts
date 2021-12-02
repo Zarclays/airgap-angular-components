@@ -1,7 +1,15 @@
-import { IACMessageDefinitionObjectV3, SerializerV3 } from '@zarclays/zgap-coinlib-core'
+import {
+  generateId,
+  IACMessageDefinitionObjectV3,
+  IACMessageType,
+  MainProtocolSymbols,
+  SerializerV3,
+  UnsignedBitcoinSegwitTransaction
+} from '@zarclays/zgap-coinlib-core'
 import { UR, URDecoder, UREncoder } from '@ngraveio/bc-ur'
 import * as bs58check from 'bs58check'
 import { IACHandlerStatus, IACMessageHandler } from '../../iac/message-handler'
+import { CryptoPSBT } from '@keystonehq/bc-ur-registry'
 
 export class SerializerV3Handler implements IACMessageHandler<IACMessageDefinitionObjectV3[]> {
   public readonly name: string = 'SerializerV3Handler'
@@ -90,7 +98,15 @@ export class SerializerV3Handler implements IACMessageHandler<IACMessageDefiniti
 
   public async getResult(): Promise<IACMessageDefinitionObjectV3[] | undefined> {
     if (this.decoder.isComplete() && this.decoder.isSuccess()) {
-      this.combinedData = this.decoder.resultUR().decodeCBOR()
+      const decoded = this.decoder.resultUR()
+      this.combinedData = decoded.decodeCBOR()
+      console.log('TYPE ', decoded.type)
+      if (decoded.type === 'crypto-psbt') {
+        const cryptoPsbt = CryptoPSBT.fromCBOR(decoded.cbor)
+        const psbt = cryptoPsbt.getPSBT().toString('hex')
+        return [this.convertPSBT(psbt)]
+      }
+
       const resultUr = bs58check.encode(this.combinedData)
       return await this.serializer.deserialize(resultUr)
     }
@@ -114,5 +130,19 @@ export class SerializerV3Handler implements IACMessageHandler<IACMessageDefiniti
     this.decoder = new URDecoder()
     this.parts = new Set()
     return
+  }
+
+  private convertPSBT(psbt: string): IACMessageDefinitionObjectV3 {
+    const payload: UnsignedBitcoinSegwitTransaction = {
+      transaction: { psbt },
+      publicKey: ''
+}
+
+    return {
+      id: generateId(8),
+      protocol: MainProtocolSymbols.BTC_SEGWIT,
+      type: IACMessageType.TransactionSignRequest,
+      payload
+    }
   }
 }
