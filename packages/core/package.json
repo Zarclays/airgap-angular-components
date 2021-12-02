@@ -1,13 +1,13 @@
 {
   "name": "@zarclays/zgap-angular-core",
   "version": "0.2.7",
-  "main": "dist/bundles/airgap-angular-core.umd.js",
-  "module": "dist/fesm2015/airgap-angular-core.js",
-  "es2015": "dist/fesm2015/airgap-angular-core.js",
-  "esm2015": "dist/esm2015/airgap-angular-core.js",
-  "fesm2015": "dist/fesm2015/airgap-angular-core.js",
-  "typings": "dist/airgap-angular-core.d.ts",
-  "metadata": "dist/airgap-angular-core.metadata.json",
+  "main": "dist/bundles/zarclays-zgap-angular-core.umd.js",
+  "module": "dist/fesm2015/zarclays-zgap-angular-core.js",
+  "es2015": "dist/fesm2015/zarclays-zgap-angular-core.js",
+  "esm2015": "dist/esm2015/zarclays-zgap-angular-core.js",
+  "fesm2015": "dist/fesm2015/zarclays-zgap-angular-core.js",
+  "typings": "dist/zarclays-zgap-angular-core.d.ts",
+  "metadata": "dist/zarclays-zgap-angular-core.metadata.json",
   "publishConfig": {
     "access": "public"
   },
@@ -57,6 +57,5 @@
     "ngx-moment": "^5.0.0",
     "rxjs": "^6.6.7",
     "zone.js": "^0.11.4"
-  },
-  "gitHead": "1fad4052dd5caf4839133206f2b2b9099f96cdcb"
+  }
 }
