@@ -7,6 +7,9 @@ type FeeConverterValue = BigNumber | string | number | null | undefined
 
 interface FeeConverterArgs {
   protocol: ICoinProtocol | ProtocolSymbols | undefined | null
+  dropSymbol?: boolean
+  reverse?: boolean
+  network?: ProtocolNetwork | string
 }
 
 @Pipe({
@@ -24,13 +27,17 @@ export class FeeConverterPipe implements PipeTransform {
       throw new Error('Invalid fee amount')
     }
 
-    const protocol: ICoinProtocol = await this.protocolsService.getProtocol(args.protocol)
-    const fee: BigNumber = new BigNumber(value).shiftedBy(-protocol.feeDecimals)
+    const protocol: ICoinProtocol = await this.protocolsService.getProtocol(args.protocol, args.network)
+    const reverse = args.reverse !== undefined && args.reverse
+
+    const shiftDirection: number = !reverse ? -1 : 1
+
+    const fee: BigNumber = new BigNumber(value).shiftedBy(shiftDirection * protocol.feeDecimals)
 
     if (fee.isNaN()) {
       throw new Error('Invalid fee amount')
     }
 
-    return `${fee.toFixed()} ${protocol?.feeSymbol.toUpperCase()}`
+    return `${fee.toFixed()}${args.dropSymbol ? '' : ' ' + protocol?.feeSymbol.toUpperCase()}`
   }
 }
