@@ -27,8 +27,6 @@
     "tslib": "^2.2.0"
   },
   "peerDependencies": {
-    "@zarclays/zgap-angular-core": "^0.2.8",
-    "@zarclays/zgap-coinlib-core": "^0.14.0",    
     "@angular/common": "^11.2.9",
     "@angular/core": "^11.2.9",
     "@angular/platform-browser": "^11.2.9",
@@ -37,7 +35,10 @@
     "@ngrx/component": "^11.1.1",
     "@ngrx/component-store": "^11.1.1",
     "@ngrx/store": "^11.1.0",
+    "@zarclays/zgap-angular-core": "*",
+    "@zarclays/zgap-coinlib-core": "^0.14.0",
     "rxjs": "^6.6.7",
     "zone.js": "^0.11.4"
-  }
+  },
+  "gitHead": "7bf19bf2fcb04fd2c4d584711cee7efd1143155f"
 }

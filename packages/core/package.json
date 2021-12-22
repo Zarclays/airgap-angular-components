@@ -2,9 +2,12 @@
   "name": "@zarclays/zgap-angular-core",
   "version": "0.2.8",
   "main": "dist/bundles/zarclays-zgap-angular-core.umd.js",
+  "module_ivy_ngcc": "__ivy_ngcc__/dist/fesm2015/zarclays-zgap-angular-core.js",
   "module": "dist/fesm2015/zarclays-zgap-angular-core.js",
+  "es2015_ivy_ngcc": "__ivy_ngcc__/dist/fesm2015/zarclays-zgap-angular-core.js",
   "es2015": "dist/fesm2015/zarclays-zgap-angular-core.js",
   "esm2015": "dist/esm2015/zarclays-zgap-angular-core.js",
+  "fesm2015_ivy_ngcc": "__ivy_ngcc__/dist/fesm2015/zarclays-zgap-angular-core.js",
   "fesm2015": "dist/fesm2015/zarclays-zgap-angular-core.js",
   "typings": "dist/zarclays-zgap-angular-core.d.ts",
   "metadata": "dist/zarclays-zgap-angular-core.metadata.json",
@@ -21,7 +24,8 @@
     "lint": "npx eslint 'src/**/*.ts'",
     "lint:ci": "npx eslint 'src/**/*.ts' -f json -o ngrx_lintReport.json || true",
     "lint:fix": "npx eslint 'src/**/*/ts' --fix",
-    "e2e": "ng e2e core"
+    "e2e": "ng e2e core",
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
   },
   "dependencies": {
     "tslib": "^2.2.0"
@@ -58,5 +62,12 @@
     "ngx-moment": "^5.0.0",
     "rxjs": "^6.6.7",
     "zone.js": "^0.11.4"
+  },
+  "gitHead": "7bf19bf2fcb04fd2c4d584711cee7efd1143155f",
+  "__processed_by_ivy_ngcc__": {
+    "es2015": "11.2.14",
+    "fesm2015": "11.2.14",
+    "module": "11.2.14",
+    "typings": "11.2.14"
   }
 }

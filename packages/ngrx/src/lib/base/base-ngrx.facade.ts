@@ -1,4 +1,4 @@
-import { BaseFacade, UIAction, UIActionStatus, UiEventService } from '@airgap/angular-core'
+import { BaseFacade, UIAction, UIActionStatus, UiEventService } from '@zarclays/zgap-angular-core'
 import { ToastOptions } from '@ionic/core'
 import { ComponentStore } from '@ngrx/component-store'
 import { Store } from '@ngrx/store'
@@ -28,6 +28,7 @@ export abstract class BaseNgRxFacade<S extends Store | ComponentStore<any>, T ex
         position: 'bottom'
       }
       this.toastElement = await this.uiEventService.getTranslatedToast({ ...defaultToastOptions, ...this.getToastData(toast.value) })
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       this.toastElement.present()
 
       return this.toastElement.onWillDismiss().then(() => {

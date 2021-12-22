@@ -3,9 +3,14 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./",
-    "declarationMap": true,
+    "declarationMap": false,
+    
     "outDir": "./out-tsc/ngrx",
     "typeRoots": ["../../node_modules/@types", "node_modules/@types"]
+  },
+  "angularCompilerOptions": {
+    "compilationMode": "partial",
+    "enableIvy": false,
   },
   "include": ["src/**/*.ts"],
   "exclude": ["test/test.ts", "**/*.spec.ts"]

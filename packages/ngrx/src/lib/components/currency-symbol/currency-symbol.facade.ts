@@ -1,5 +1,5 @@
-import { FilesystemService, ICurrencySymbolFacade, ProtocolService, SymbolInput } from '@airgap/angular-core'
-import { ProtocolSymbols } from '@airgap/coinlib-core'
+import { FilesystemService, ICurrencySymbolFacade, ProtocolService, SymbolInput } from '@zarclays/zgap-angular-core'
+import { ProtocolSymbols } from '@zarclays/zgap-coinlib-core'
 import { Injectable, Injector } from '@angular/core'
 import { Observable } from 'rxjs'
 import { BaseNgRxFacade } from '../../base/base-ngrx.facade'

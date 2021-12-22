@@ -9,7 +9,8 @@ import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, IonicModule, TranslateModule, MomentModule, QRCodeModule, FormsModule],
+  // imports: [CommonModule, IonicModule, TranslateModule, MomentModule, QRCodeModule, FormsModule],
+  imports: [CommonModule],
   exports: []
 })
 export class ComponentsModule {}

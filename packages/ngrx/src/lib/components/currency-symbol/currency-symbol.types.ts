@@ -1,4 +1,4 @@
-import { SymbolInput, SymbolType } from '@airgap/angular-core'
+import { SymbolInput, SymbolType } from '@zarclays/zgap-angular-core'
 
 export interface CurrencySymbolState {
   src: string

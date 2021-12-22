@@ -1,4 +1,4 @@
-import { DEFAULT_CURRENCY_SYMBOL_URL, FilesystemService, SymbolInput, SymbolValue } from '@airgap/angular-core'
+import { DEFAULT_CURRENCY_SYMBOL_URL, FilesystemService, SymbolInput, SymbolValue } from '@zarclays/zgap-angular-core'
 import { Injectable } from '@angular/core'
 import { ComponentStore, tapResponse } from '@ngrx/component-store'
 import { Observable, Subscriber } from 'rxjs'
