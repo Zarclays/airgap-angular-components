@@ -24,7 +24,15 @@ import {
   SubProtocolSymbols,
   MoonriverProtocol,
   BSCProtocol,
-  CeloProtocol
+  CeloProtocol,
+  MoonriverProtocolNetwork,
+  MoonriverProtocolOptions,
+  MoonriverSubscanBlockExplorer,
+  TezosCTez,
+  TezosPlenty,
+  TezosQUIPU,
+  TezosUDEFI,
+  TezosWRAP
 } from '@zarclays/zgap-coinlib-core'
 import { Token } from '../../types/Token'
 // import { bscTokens } from './bsc-tokens'

@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core'
 import BigNumber from 'bignumber.js'
-import { ICoinProtocol, ProtocolSymbols } from '@zarclays/zgap-coinlib-core'
+import { ICoinProtocol, ProtocolNetwork, ProtocolSymbols } from '@zarclays/zgap-coinlib-core'
 import { ProtocolService } from '../../services/protocol/protocol.service'
 
 type FeeConverterValue = BigNumber | string | number | null | undefined

@@ -28,10 +28,12 @@
   },
   "peerDependencies": {
     "@zarclays/zgap-angular-core": "^0.2.8",
+    "@zarclays/zgap-coinlib-core": "^0.14.0",    
     "@angular/common": "^11.2.9",
     "@angular/core": "^11.2.9",
     "@angular/platform-browser": "^11.2.9",
     "@angular/platform-browser-dynamic": "^11.2.9",
+    "@ionic/core": "^5.6.4",
     "@ngrx/component": "^11.1.1",
     "@ngrx/component-store": "^11.1.1",
     "@ngrx/store": "^11.1.0",
