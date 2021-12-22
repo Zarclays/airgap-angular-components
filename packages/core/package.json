@@ -51,6 +51,7 @@
     "@ngx-translate/core": "^13.0.0",
     "@zarclays/zgap-coinlib-core": "^0.14.0",
     "angularx-qrcode": "^11.0.0",
+    "axios": "^0.24.0",
     "bignumber.js": "^9.0.1",
     "moment": "^2.29.1",
     "myetherwallet-blockies": "^0.1.1",
