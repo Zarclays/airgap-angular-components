@@ -4,7 +4,7 @@ import {
   IACMessageType,
   MainProtocolSymbols,
   UnsignedBitcoinSegwitTransaction
-} from '@airgap/coinlib-core'
+} from '@zarclays/zgap-coinlib-core'
 import { UR, URDecoder, UREncoder } from '@ngraveio/bc-ur'
 import { IACHandlerStatus, IACMessageHandler } from '../../iac/message-handler'
 

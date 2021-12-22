@@ -4,7 +4,7 @@ import {
   IACMessageDefinitionObjectV3,
   MainProtocolSymbols,
   SignedBitcoinSegwitTransaction
-} from '@airgap/coinlib-core'
+} from '@zarclays/zgap-coinlib-core'
 import { IACQrGenerator } from '../../iac/qr-generator'
 import { UR, UREncoder } from '@ngraveio/bc-ur'
 import * as bs58check from 'bs58check'
@@ -19,7 +19,7 @@ import {
   PathComponent,
   CryptoPSBT
 } from '@keystonehq/bc-ur-registry'
-import { IACMessageType } from '@airgap/coinlib-core/serializer-v3/interfaces'
+import { IACMessageType } from '@zarclays/zgap-coinlib-core/serializer-v3/interfaces'
 
 class ExtendedPublicKey {
   private readonly rawKey: Buffer

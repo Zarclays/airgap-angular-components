@@ -1,5 +1,5 @@
-import { HttpRemoteData } from '@airgap/coinlib-core/utils/remote-data/HttpRemoteData'
-import { IpfsRemoteData } from '@airgap/coinlib-core/utils/remote-data/IpfsRemoteData'
+import { HttpRemoteData } from '@zarclays/zgap-coinlib-core/utils/remote-data/HttpRemoteData'
+import { IpfsRemoteData } from '@zarclays/zgap-coinlib-core/utils/remote-data/IpfsRemoteData'
 import { Injectable } from '@angular/core'
 
 type UriType = 'remote' | 'data' | 'unsupported'

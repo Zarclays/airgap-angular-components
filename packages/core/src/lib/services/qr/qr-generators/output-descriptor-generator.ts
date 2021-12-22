@@ -1,7 +1,7 @@
-import { AccountShareResponse, IACMessageDefinitionObjectV3, MainProtocolSymbols } from '@airgap/coinlib-core'
+import { AccountShareResponse, IACMessageDefinitionObjectV3, MainProtocolSymbols } from '@zarclays/zgap-coinlib-core'
 import { IACQrGenerator } from '../../iac/qr-generator'
 
-import { IACMessageType } from '@airgap/coinlib-core/serializer-v3/interfaces'
+import { IACMessageType } from '@zarclays/zgap-coinlib-core/serializer-v3/interfaces'
 
 export class OutputDescriptorGenerator extends IACQrGenerator {
   private data: string | undefined
