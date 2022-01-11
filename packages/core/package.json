@@ -1,6 +1,6 @@
 {
   "name": "@zarclays/zgap-angular-core",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "main": "dist/bundles/zarclays-zgap-angular-core.umd.js",
   "module_ivy_ngcc": "__ivy_ngcc__/dist/fesm2015/zarclays-zgap-angular-core.js",
   "module": "dist/fesm2015/zarclays-zgap-angular-core.js",
@@ -62,12 +62,5 @@
     "ngx-moment": "^5.0.0",
     "rxjs": "^6.6.7",
     "zone.js": "^0.11.4"
-  },
-  "gitHead": "7bf19bf2fcb04fd2c4d584711cee7efd1143155f",
-  "__processed_by_ivy_ngcc__": {
-    "es2015": "11.2.14",
-    "fesm2015": "11.2.14",
-    "module": "11.2.14",
-    "typings": "11.2.14"
   }
 }

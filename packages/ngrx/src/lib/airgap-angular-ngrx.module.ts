@@ -8,8 +8,6 @@ import { ComponentsModule } from './components/components.module'
     StoreModule.forFeature('shared', {}),
     ComponentsModule
   ],
-  exports: [
-    ComponentsModule
-  ]
+  exports: [ComponentsModule]
 })
 export class AirGapAngularNgRxModule {}

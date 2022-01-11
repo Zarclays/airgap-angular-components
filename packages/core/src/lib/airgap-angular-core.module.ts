@@ -8,7 +8,7 @@ import { CurrencySymbolFacade } from './components/currency-symbol/currency-symb
 
 export interface AirGapAngularCoreModuleConfig {
   factories?: {
-    currencySymbolFacade?: (injector: Injector) => CurrencySymbolFacade
+    currencySymbolFacade?(injector: Injector): CurrencySymbolFacade
   }
 }
 

@@ -11,4 +11,4 @@ export * from './lib/base/base-ngrx.facade'
 // Components
 // export * from './lib/components/components.module'
 
-// export * from './lib/components/currency-symbol/currency-symbol.facade'
+export * from './lib/components/currency-symbol/currency-symbol.facade'
